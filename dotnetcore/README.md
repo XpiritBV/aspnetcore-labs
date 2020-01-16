@@ -6,6 +6,22 @@
 
 In this hands-on lab, you’ll build the Bethany’s Pie Shop application yourself. Let’s get started!
 
+## Table of contents
+
+- [Setting up the site](#setting-up-the-site)
+- [Creating the model](#creating-the-model)
+- [Creating a Controller](#creating-a-controller)
+- [Creating the View](#creating-the-view)
+- [Creating a database with EF Core](#creating-a-database-with-ef-core)
+- [Creating a Partial view](#creating-a-partial-view)
+- [Creating the Shopping Cart](#creating-the-shopping-cart)
+- [Creating the home page](#creating-the-home-page)
+- [Creating a view component](#creating-a-view-component)
+- [Creating a tag helper](#creating-a-tag-helper)
+- [Adding the detail page and navigation](#adding-the-detail-page-and-navigation)
+- [Creating the Order Form](#creating-the-order-form)
+- [Adding ASP.NET Identity](#adding-aspnet-identity)
+
 ## Setting up the site
 
 1.	Create a new Empty ASP.NET Core application, as shown below.
