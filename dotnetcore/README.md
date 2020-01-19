@@ -8,21 +8,21 @@ In this hands-on lab, you’ll build the Bethany’s Pie Shop application yourse
 
 ## Table of contents
 
-- [Setting up the site](#setting-up-the-site)
-- [Creating the model](#creating-the-model)
-- [Creating a Controller](#creating-a-controller)
-- [Creating the View](#creating-the-view)
-- [Creating a database with EF Core](#creating-a-database-with-ef-core)
-- [Creating a Partial view](#creating-a-partial-view)
-- [Creating the Shopping Cart](#creating-the-shopping-cart)
-- [Creating the home page](#creating-the-home-page)
-- [Creating a view component](#creating-a-view-component)
-- [Creating a tag helper](#creating-a-tag-helper)
-- [Adding the detail page and navigation](#adding-the-detail-page-and-navigation)
-- [Creating the Order Form](#creating-the-order-form)
-- [Adding ASP.NET Identity](#adding-aspnet-identity)
+- [1. Setting up the site](#1-setting-up-the-site)
+- [2. Creating the model](#2-creating-the-model)
+- [3. Creating a Controller](#3-creating-a-controller)
+- [4. Creating the View](#4-creating-the-view)
+- [5. Creating a database with EF Core](#5-creating-a-database-with-ef-core)
+- [6. Creating a Partial view](#6-creating-a-partial-view)
+- [7. Creating the Shopping Cart](#7-creating-the-shopping-cart)
+- [8. Creating the home page](#8-creating-the-home-page)
+- [9. Creating a view component](#9-creating-a-view-component)
+- [10. Creating a tag helper](#10-creating-a-tag-helper)
+- [11. Adding the detail page and navigation](#11-adding-the-detail-page-and-navigation)
+- [12. Creating the Order Form](#12-creating-the-order-form)
+- [13. Adding ASP.NET Identity](#13-adding-aspnet-identity)
 
-## Setting up the site
+## 1. Setting up the site
 
 1.	Create a new Empty ASP.NET Core application, as shown below.
 
@@ -66,7 +66,7 @@ In this hands-on lab, you’ll build the Bethany’s Pie Shop application yourse
 
 5.	Create in the project a `Controllers` and `Views` folder.
 
-## Creating the model
+## 2. Creating the model
 
 1.	Create a `Models` folder. In this folder, create the following classes: `Pie` and `Category`.
 
@@ -164,7 +164,7 @@ In this hands-on lab, you’ll build the Bethany’s Pie Shop application yourse
     services.AddScoped<IPieRepository, MockPieRepository>();
 ```
 
-## Creating a Controller
+## 3. Creating a Controller
 
 1. Create a new controller in the `Controllers` folder: `PieController`. This class needs to inherit from the base `Controller` class.
 
@@ -194,7 +194,7 @@ In this hands-on lab, you’ll build the Bethany’s Pie Shop application yourse
     }
 ```
 
-## Creating the View
+## 4. Creating the View
 
 1. At this point, the application will compile but it won’t be running just yet, since we don’t have a view to go with that. Let’s do that next. Create a `Pie` folder as subfolder in the `Views` folder and in there, create the `List.cshtml` view. Add the following code.
 
@@ -507,7 +507,7 @@ Repeat this process for `jQuery`. Visual Studio will add a file named `libman.js
 
 ![](./img/list-with-bootstrap.png)
 
-## Creating a database with EF Core
+## 5. Creating a database with EF Core
 
 1. To use `Entity Framework`, since ASP.NET Core 3.0, we need to bring in some packages. Using NuGet, add a reference to:
 
@@ -830,7 +830,7 @@ services.AddTransient<ICategoryRepository, CategoryRepository>();
 
 15. Run the app, you should now get in some real pies in the list!
 
-## Creating a Partial view
+## 6. Creating a Partial view
 
 1. We’re going to create a partial view. In the `Shared` folder, create a view called `PieOverviewSummary`. 
 
@@ -878,7 +878,7 @@ services.AddTransient<ICategoryRepository, CategoryRepository>();
 
 5. Run the app, the result should be the same as before, but now with data coming from the database!
 
-## Creating the Shopping Cart
+## 7. Creating the Shopping Cart
 
 1. Next, we are going to create the _Shopping Cart_. Start with the creation of the `ShoppingCartItem` class in your `Model` folder.
 
@@ -1131,7 +1131,7 @@ services.AddTransient<ICategoryRepository, CategoryRepository>();
 
 12. We can’t run use the _Shopping Cart_ just yet, we’ll do that later!
 
-## Creating the home page
+## 8. Creating the home page
 
 Use the snippets below to create the homepage yourself. If you have problems, consult the finished solution.
 
@@ -1246,7 +1246,7 @@ Use the snippets below to create the homepage yourself. If you have problems, co
     </div>
 ```
 
-## Creating a view component
+## 9. Creating a view component
 
 1. Create a folder called `Components`.
 
@@ -1335,7 +1335,7 @@ var items = new List<ShoppingCartItem>() { new ShoppingCartItem(), new ShoppingC
 
 ![](./img/shopping-cart-component.png)
 
-## Creating a tag helper
+## 10. Creating a tag helper
 
 1. We’ll now create a first _tag helper_. First, create a basic `Contact` page using an empty `ContactController` and a default view.
 
@@ -1376,7 +1376,7 @@ Make sure to compile your project before adding this code.
 
 ![](./img/email-tag-helper.png)
 
-## Adding the detail page and navigation
+## 11. Adding the detail page and navigation
 
 Let’s now create the _Detail page_ for the application.
 
@@ -1540,7 +1540,7 @@ Let’s now create the _Detail page_ for the application.
 
 ![](./img/category-navigation.png)
 
-## Creating the Order Form
+## 12. Creating the Order Form
 
 1. In order for us to create the _Order form_, we’ll need to make some model changes. To give you some extra thinking work, here are the snippets of the model changes you’ll need to do. Try figuring out what goes where and take a look in the finished solution if you get stuck.
 
@@ -2023,7 +2023,7 @@ Let’s now create the _Detail page_ for the application.
 
 ![](./img/validation-at-work.png)
 
-## Adding ASP.NET Identity
+## 13. Adding ASP.NET Identity
 
 In the last part of this lab, we are going to allow users to log in to the application and we’ll make sure that only logged-in users can actually place an order. 
 
