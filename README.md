@@ -16,7 +16,7 @@ For the Xamarin workshop, follow the labs in the [Xamarin Hands-On-Labs](https:/
 
 ## Additional reading materials:
 
-**span<t>**
+**span&lt;t&gt;**
 https://docs.microsoft.com/en-us/archive/msdn-magazine/2018/january/csharp-all-about-span-exploring-a-new-net-mainstay
 
 **.NET standard**
