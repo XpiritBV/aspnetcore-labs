@@ -99,30 +99,45 @@ namespace TodoApi.Models
 
 In order to inject the database context into the controller, we need to register it with the dependency injection container. 
 
-Register the database context with the service container using the built-in support for dependency injection. Replace the contents of the `Startup.cs` file with the following:
+Register the database context with the service container using the built-in support for dependency injection. Replace the contents of `Startup.cs` with:
 
 ```csharp
-using Microsoft.AspNetCore.Builder;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using TodoApi.Models;
-
-namespace TodoApi
-{
     public class Startup
-    {       
+    {
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+
+        public IConfiguration Configuration { get; }
+
+        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<TodoContext>(opt => opt.UseInMemoryDatabase());
-            services.AddMvc();
+            services.AddControllers();
+            services.AddDbContext<TodoContext>(opt => opt.UseInMemoryDatabase("TodoDatabase"));
         }
 
-        public void Configure(IApplicationBuilder app)
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.UseMvc();
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+
+            app.UseHttpsRedirection();
+
+            app.UseRouting();
+
+            app.UseAuthorization();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
         }
     }
-}
 ```
 
 The preceding code snippet:
