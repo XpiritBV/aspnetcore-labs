@@ -102,6 +102,16 @@ In order to inject the database context into the controller, we need to register
 Register the database context with the service container using the built-in support for dependency injection. Replace the contents of `Startup.cs` with:
 
 ```csharp
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using TodoApi.Models;
+
+namespace TodoApi
+{
     public class Startup
     {
         public Startup(IConfiguration configuration)
@@ -138,6 +148,7 @@ Register the database context with the service container using the built-in supp
             });
         }
     }
+}
 ```
 
 The preceding code snippet:
