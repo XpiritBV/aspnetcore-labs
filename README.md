@@ -36,5 +36,7 @@ https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-core-2-1/
 https://docs.microsoft.com/en-us/aspnet/core/signalr/client-features?view=aspnetcore-3.1
 https://docs.microsoft.com/en-us/aspnet/core/signalr/introduction?view=aspnetcore-3.1
 
-
+## License
+[![Creative Commons License](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-nc-sa/4.0/)  
+This ASP.NET Core workshop by [Xpirit Netherlands](https://xpirit.com) is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
 

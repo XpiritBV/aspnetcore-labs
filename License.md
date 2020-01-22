@@ -1,0 +1,1 @@
+This ASP.NET Core workshop by [Xpirit Netherlands](https://xpirit.com) is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
